@@ -22,7 +22,7 @@ public class Cl_Descargar_Instalador {
 
     public static void down(String zip) {
 
-        String url = "http://www.lunasystemsperu.com/uploads_sm/" + zip + ".zip";
+        String url = "http://www.conmetal.pe/uploads_erpplus/" + zip + ".zip";
         String name = zip + ".zip";
 
         // datos basicos para una descarga

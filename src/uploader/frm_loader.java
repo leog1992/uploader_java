@@ -47,7 +47,7 @@ public class frm_loader extends javax.swing.JFrame {
         int version_nueva = 0;
         //REVISAR SI EXISTE NUEVA VERSION
         try {
-            URL url = new URL("http://www.lunasystemsperu.com/uploads_erpplus/version.txt");
+            URL url = new URL("http://www.conmetal.pe/uploads_erpplus/version.txt");
             URLConnection uc = url.openConnection();
             uc.connect();
             //Creamos el objeto con el que vamos a leer
@@ -156,7 +156,7 @@ public class frm_loader extends javax.swing.JFrame {
                 act = 0;
                 msg.setText("Cargando Modulos ----");
             }
-
+            System.out.println("Actualizar = " + act);
         }
 
         if (progreso.getValue() == 60) {
@@ -192,15 +192,19 @@ public class frm_loader extends javax.swing.JFrame {
                         System.out.println("El fichero no puede ser borrado");
                     }
                 }
+            } else {
+                System.out.println("no se actualizara");
             }
 
         }
 
-        if (progreso.getValue() == 100) {
+        if (progreso.getValue() == 99) {
            try {
+               System.out.println("ejecutando .. ");
                Runtime.getRuntime().exec("java -jar erp_metalmecanica.jar");
                this.dispose();
            } catch (IOException ex) {
+               System.out.println(ex);
                Logger.getLogger(frm_loader.class.getName()).log(Level.SEVERE, null, ex);
            }
         }
