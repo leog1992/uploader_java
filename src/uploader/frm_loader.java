@@ -125,7 +125,7 @@ public class frm_loader extends javax.swing.JFrame {
 
         msg.setForeground(new java.awt.Color(255, 255, 255));
         msg.setText("Cargando Aplicacion");
-        getContentPane().add(msg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        getContentPane().add(msg, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 350, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Recursos/splash_erp.png"))); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
